@@ -52,8 +52,8 @@ if __name__ == "__main__":
         print("Symbol ID:", symbol_id)
 
         timeframe = "86400"  # Candle timeframe (86400 seconds = 1 day)
-        start_date = "01/01/2022"  # Start date
-        end_date = "02/23/2024"    # End date
+        start_date = "01/01/2022"  
+        end_date = "02/23/2024"    
 
         candle_data = fetch_historical_candle_data(symbol_id, timeframe, start_date, end_date)
         if candle_data is not None:
