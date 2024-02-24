@@ -1,3 +1,11 @@
+
+# 1. Write a code to get two years data (1st jan 2021 to 31st dec 2022) of 15 minute interval for symbol: BTCUSD for any category,
+# output result format: pandas dataframe, convert timestamp to datetime with IST timezone and set datetime column as dataframe index,
+# and add VWAP and MACD columns (check https://github.com/twopirllc/pandas-ta for vwap and macd calculations)
+
+# Documentation:
+# https://bybit-exchange.github.io/docs/v5/market/kline
+
 # install necessary modules : ta,pandas
 # Crated account on  : https://www.bybit.com/ and genrate api endpoint to use this 
 
