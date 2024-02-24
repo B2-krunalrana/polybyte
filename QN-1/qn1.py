@@ -6,7 +6,13 @@ import pandas as pd
 from datetime import datetime
 import pytz
 import ta
-import .env
+from dotenv import load_dotenv
+import os 
+# Load environment variables from .env file
+load_dotenv()
+
+api_key=os.getenv("api_key")
+api_secret=os.getenv("api_secret")
 
 
 def get_data(symbol, start_time, end_time, interval, api_key, api_secret):
@@ -16,7 +22,6 @@ def get_data(symbol, start_time, end_time, interval, api_key, api_secret):
         'api_key': api_key,
         'api_secret': api_secret
     }
-
     print()
     print()
     print(url)
