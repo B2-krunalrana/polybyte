@@ -1,8 +1,13 @@
+# install necessary modules : ta,pandas
+# Crated account on  : https://www.bybit.com/ and genrate api endpoint to use this 
+
 import requests
 import pandas as pd
 from datetime import datetime
 import pytz
 import ta
+import .env
+
 
 def get_data(symbol, start_time, end_time, interval, api_key, api_secret):
     url = f"https://api.bybit.com/v2/public/kline/list?symbol={symbol}&interval={interval}&limit=200"
@@ -46,8 +51,6 @@ start_time = '2021-01-01 00:00:00'
 end_time = '2022-12-31 23:59:59'
 symbol = 'BTCUSD'
 interval = '15m'
-api_key = 'SzjZaCcu6FDfr1G3QQ'
-api_secret = '5D1Wi0A6l4Kkg3t1pIVSNtqXI8llBHDhxqda'
 
 data = get_data(symbol, start_time, end_time, interval, api_key, api_secret)
 print(data)
